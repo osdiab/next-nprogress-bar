@@ -153,7 +153,6 @@ var AppProgressBar$1 = React.memo(function (_a) {
             startProgress();
         };
         var handleMutation = function () {
-            var _a;
             var anchorElements = Array.from(document.querySelectorAll('a'));
             var validAnchorElements = anchorElements.filter(function (anchor) {
                 var href = getAnchorProperty(anchor, 'href');
@@ -170,7 +169,7 @@ var AppProgressBar$1 = React.memo(function (_a) {
             validAnchorElements.forEach(function (anchor) {
                 anchor.addEventListener('click', handleAnchorClick, true);
             });
-            (_a = elementsWithAttachedHandlers.current).push.apply(_a, validAnchorElements);
+            elementsWithAttachedHandlers.current = validAnchorElements;
         };
         var mutationObserver = new MutationObserver(handleMutation);
         mutationObserver.observe(document, { childList: true, subtree: true });
