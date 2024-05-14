@@ -1,5 +1,5 @@
 {
-  "name": "next-nprogress-bar",
+  "name": "@osdiab/next-nprogress-bar",
   "version": "2.3.11",
   "description": "NextJS progress bar compatible with new app directory",
   "repository": {
